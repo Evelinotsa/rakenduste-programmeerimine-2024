@@ -50,3 +50,22 @@ console.log(addNumbersNestedAF(9)(8));
 
 const greet = (name) => `Hello ${name}`;
 console.log(greet("Evelin"));
+
+//Map ja filter
+//8. Ülesanne: liita ogale elemendile juurde 5+, et uuel muutujale omandaks
+
+const newArray = [1, 2, 3, 4, 5];
+const addedArray = newArray.map((element) => element + 5);
+console.log(addedArray);
+
+//9. Ülesanne
+
+const threeParameters = newArray.map((element, index, array) => {
+  console.log(element, index, array);
+
+  const added = 1 + 4;
+
+  return element + 5;
+});
+
+console.log({ threeParameters: threeParameters });
