@@ -5,11 +5,16 @@ import Counter from "./components/Counter";
 import PropDrilling from "./components/PropDrilling";
 import Show from "./components/Show";
 import Context from "./components/Context";
+import MyHobbies from "./components/MyHobbies";
+import "./myHobbies.css";
 
 function App() {
   const [show, setShow] = useState(true);
 
   const toggleShow = () => setShow((prevShow) => !prevShow);
+
+  const name = "Evelin";
+  const hobbies = ["Lugemine", "Jooksmine", "Kassid"];
 
   return (
     <>
@@ -17,8 +22,8 @@ function App() {
       <Show show={show} toggleShow={toggleShow} />
       <PropDrilling />
       <Name title="Evelin" />;
-      <Name />
       <Counter />
+      <MyHobbies name={name} hobbies={hobbies} />
     </>
   );
 }
