@@ -14,7 +14,7 @@ const SubmitCat = ({ fetchCats }: SubmitCatProps) => {
                 method: "POST",
                 headers: {
                     Accept: "application/json",
-                    "Content.Type": "application/json",
+                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify({ name: name }),
             });
@@ -42,7 +42,9 @@ const SubmitCat = ({ fetchCats }: SubmitCatProps) => {
                 <Stack>
                     <TextField label="Cat name"
                     onChange={(event) => setName(event.target.value)}/>
-                    <Button type="submit">Add</Button>
+                    <Button variant="contained" type="submit" sx={{ background: "#5c6b73" }}>
+                        Add
+                    </Button>
                 </Stack>
             </form>
         </Box>
