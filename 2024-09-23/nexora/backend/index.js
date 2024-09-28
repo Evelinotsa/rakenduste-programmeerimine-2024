@@ -9,11 +9,13 @@ app.use(morgan("dev"));
 
 const catsRoutes = require("./routes/cats.routes");
 const exampleRoutes = require("./routes/example.routes");
+const todoRoutes = require("./routes/todo.routes");
 
 app.use(express.json());
 
 app.use("/cats", catsRoutes);
 app.use("/examples", exampleRoutes);
+app.use("/todos", todoRoutes);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
